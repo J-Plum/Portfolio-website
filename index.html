@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-Plum DashBoard</title>
+    <script src="https://kit.fontawesome.com/6c341df0c8.js" crossorigin="anonymous"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="calendar/calendar.js"></script>
+    <script defer src="js/todo.js"></script>
+    <script defer src="js/agent.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- profile -->
+        <section class="profile">
+            <div class="profile__area">
+                <img src="images/favicon.png" alt="" class="profile__img">
+                <div>
+                    <div id="name">J-Plum</div>
+                    <span id="job">Programmer</span>
+                </div>
+            </div>
+            <div class="profile__menu">
+                <ul>
+                    <li class="profile__menu__list">
+                        <div class="profile__menu__item" data-id="home">
+                            <span class="menu__list img">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                            <span class="menu__list name">Home</span>
+                        </div>
+                        <div class="profile__menu__item" data-id="about">
+                            <span class="menu__list img">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <span class="menu__list name">About</span>
+                        </div>
+                        <div class="profile__menu__item" data-id="project">
+                            <span class="menu__list img">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </span>
+                            <span class="menu__list name">Project</span>
+                        </div>
+                        <div class="profile__menu__item" data-id="contact">
+                            <span class="menu__list img">
+                                <i class="fa-regular fa-comment-dots"></i>
+                            </span>
+                            <span class="menu__list name">Contact</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Weather -->
+        <section class="weather">
+            <div class="weather__time">
+                <span class="times weather__hours">01</span>
+                <span class=" weather__clock">:</span>
+                <span class="times weather__minute">02</span>
+                <span class=" weather__clock2">:</span>
+                <span class="times weather__second">03</span>
+                <span class=" weather__ampm"></span>
+            </div>
+            <div class="weather__days">
+                <span class="weather__month"></span>
+                <span class="weather__day"></span>
+                <span class="weather__week"></span>
+            </div>
+            <div class="weather__geo">Seoul</div>
+            <div class="weather__images">
+                <img class="weather__image" src="images/weather/clear.png" alt="image">
+                <span class="weather__main">Sunny</span>
+            </div>
+            <div class="weather__tempRh">
+                <span class="weather__temp">30</span>
+                <span class="weather__rh">50</span>
+            </div>
+
+        </section>
+
+
+        <!-- Calendar -->
+        <section class="calendar">
+            <div class="header">
+                <div class="year_month"></div>
+                <div class="nav">
+                    <button class="nav-btn go-prev">&lt;</button>
+                    <button class="nav-btn go-today">Today</button>
+                    <button class="nav-btn go-next">&gt;</button>
+                </div>
+            </div>
+            <hr>
+            <div class="main">
+                <div class="days">
+                    <div class="day">일</div>
+                    <div class="day">월</div>
+                    <div class="day">화</div>
+                    <div class="day">수</div>
+                    <div class="day">목</div>
+                    <div class="day">금</div>
+                    <div class="day">토</div>
+                </div>
+                <div class="dates"></div>
+            </div>
+        </section>
+
+
+        <!-- Projects -->
+        <section class="projects">
+            <div class="animation_canvas">
+                <h2 class="project__link">My Projects!</h2>
+                <div class="project__row">
+                    <div class="project">
+                        <div>
+                            <img src="images/projects/project1.png" alt="shooting game" class="project__img">
+                            <span class="project__span">
+                                Vanilla JS game
+                            </span>
+                        </div>
+                        <div>
+                            <span class="project__span">
+                                Vanilla JS paint
+                            </span>
+                            <img src="images/projects/project2.png" alt="paint" class="project__img">
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div>
+                            <img src="images/projects/project3.png" alt="coordinates" class="project__img">
+                            <span class="project__span">
+                                Vanilla Js<br>Coordinates
+                            </span>
+                        </div>
+                        <div>
+                            <span class="project__span">
+                                coding Project 4
+                            </span>
+                            <img src="images/projects/project4.png" alt="homepage" class="project__img">
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div>
+                            <img src="images/projects/project5.png" alt="" class="project__img">
+                            <span class="project__span">
+                                coding Project 5
+                            </span>
+                        </div>
+                        <div>
+                            <span class="project__span">
+                                coding Project 6
+                            </span>
+                            <img src="images/projects/project6.png" alt="" class="project__img">
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div>
+                            <img src="images/projects/project7.png" alt="" class="project__img">
+                            <span class="project__span">
+                                coding Project 7
+                            </span>
+                        </div>
+                        <div>
+                            <span class="project__span">
+                                coding Project 8
+                            </span>
+                            <img src="images/projects/project8.png" alt="" class="project__img">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__button">
+                    <img src="images/leftArrow.png" class="left_btn" alt="leftslider">
+                    <img src="images/rightArrow.png" class="right_btn" alt="rightslider">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Me -->
+        <section class="contact" style="margin-left: 50px;">
+            <h2>Contact Me!</h2>
+            <div id="contact__list">
+                <div class="contact__block contact__github">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="contact_text">
+                        <span>GitHub</span>
+                        <span>J-Plum</span>
+                    </div>
+                </div>
+                <div class="contact__block contact__gmail">
+                    <i class="fa-brands fa-google"></i>
+                    <div class="contact_text">
+                        <span>G-mail</span>
+                        <span>Dev.J.Plum</span>
+                        <textarea class="emailAddress">Dev.j.Plum@gmail.com</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="visitor">
+                <div class="line"></div>
+                <div class="visitor__boxes">
+                    <div class="visitor__block">
+                        <div class="visitor__today">
+                            <img src="images/rabbit1.png" alt="today">
+                        </div>
+                        <span>Today : 12</span>
+                    </div>
+                    <div class="visitor__block">
+                        <div class="visitor__total">
+                            <img src="images/rabbit2.png" alt="total">
+                        </div>
+                        <span>Total : 237</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- todo -->
+        <section class="todo">
+            <div class="todo__box">
+                <h2>Your task today!</h2>
+                <!-- <span>+ Add new Task</span> -->
+                <input type="text" class="todo__searchBox" placeholder="Add new Task">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <ul class="items">
+                    <!-- <li class="item__row" data-id="-1">
+                        <div class="item">
+                            <input type="checkbox" class="item__check">
+                            <span class="item__name">Play the game!</span>
+                            <button class="item__delete">
+                                <i class="fa-solid fa-trash" data-id="-1"></i>
+                            </button>
+                        </div>
+                        <div class="item__divider"></div>
+                    </li> -->
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Remaining todos -->
+        <section class="progressBar">
+            <h2>Remaining todos</h2>
+            <div class="progress__round"></div>
+            <div class="col-md-3">
+                <div class="round" data-size="200" data-thickness="5">
+                    <strong></strong>
+                    <span> 10 / 1</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+
+</html>

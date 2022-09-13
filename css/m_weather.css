@@ -1,0 +1,156 @@
+/* Weather */
+
+.weather {
+   box-sizing: border-box;
+   position: relative;
+   display: block;
+   margin: auto;
+   width: 95%;
+   height: 370px;
+   border: 5px solid var(--color-main);
+   border-radius: var(--size-border-radius2);
+   padding: 23px;
+   background-color: var(--color-dark-main);
+   font-family: "여기어때잘난체";
+}
+
+
+.weather span {
+   color: var(--color-white);
+   font-weight: var(--weight-super-bold);
+}
+
+.weather__time {
+   position: relative;
+   left: 4px;
+   width: 85%;
+   display: flex;
+   justify-content: space-evenly;
+   font-size: var(--font-large);
+   margin-bottom: 15px;
+   flex-wrap: wrap;
+}
+
+.times {
+   width: 58px;
+}
+
+.weather__minute {
+   position: relative;
+   left: 7px;
+
+}
+
+.weather__second {
+   position: relative;
+   left: 13px;
+}
+
+.weather__ampm {
+   position: absolute;
+   right: 3px;
+   top: 22px;
+}
+
+.weather__time span:last-child {
+   font-size: var(--font-medium);
+}
+
+.weather__day::before {
+   content: "/ ";
+}
+
+.weather__clock {
+   position: relative;
+}
+
+.weather__clock2 {
+   position: relative;
+   left: 9px;
+}
+
+.weather.weather__active .weather__clock,
+.weather.weather__active .weather__clock2 {
+   color: var(--color-dark-main)
+}
+
+.weather__days {
+   position: relative;
+   top: 5px;
+   left: 8px;
+}
+
+.weather__days>span {
+   position: relative;
+   top: -10px;
+   font-size: var(--font-medium);
+   color: var(--color-white);
+}
+
+.weather__images {
+   position: relative;
+   top: 10px;
+   display: inline-block;
+   width: 120px;
+}
+
+.weather__images img {
+   display: inline-block;
+   position: relative;
+   width: 105px;
+   top: 15px;
+   left: 10px;
+}
+
+.weather__images span {
+   display: inline-block;
+   position: relative;
+   width: 110px;
+   top: 10px;
+   left: -6px;
+   text-align: center;
+   font-size: var(--font-medium);
+   font-weight: var(--weight-super-bold);
+   float: right;
+}
+
+.weather__geo {
+   position: relative;
+   top: 20px;
+   left: 2px;
+   color: var(--color-white);
+   font-size: var(--font-large);
+   font-weight: var(--weight-super-bold);
+}
+
+.weather__tempRh {
+   position: relative;
+   top: 26px;
+   left: 40px;
+   display: inline-block;
+   width: 100px;
+}
+
+.weather__temp {
+   font-size: var(--font-large);
+}
+
+.weather__rh {
+   position: relative;
+   top: 20px;
+   font-size: var(--font-large);
+}
+
+.weather__temp::after {
+   position: relative;
+   font-size: var(--font-regular);
+   top: -16px;
+   content: "°C";
+}
+
+.weather__rh::after {
+   position: relative;
+   font-size: var(--font-regular);
+   top: 0px;
+   content: "%";
+}

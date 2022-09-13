@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cafe</title>
+   <script src="https://kit.fontawesome.com/6c341df0c8.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="css/m_style.css">
+   <link rel="stylesheet" href="css/m_weather.css">
+   <link rel="stylesheet" href="css/m_calendar.css">
+   <script src="js/m_calendar.js" defer></script>
+   <script src="js/m_index.js" defer></script>
+   <script src="js/todo.js" defer></script>
+   <script src="js/jquery-3.6.0.min.js"></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js'></script>
+</head>
+
+<body>
+   <div class="container">
+      <header id="home">
+         <nav>
+            <div class="moveWeather">weather</div>
+            <div class="moveCalender">calendar</div>
+            <div class="moveProjects">projects</div>
+         </nav>
+         <div class="header__profile">
+            <img src="images/favicon.png" alt="logo">
+            <div class="text profile_text">
+               <h1>Welcome!</h1>
+               <h2>My Dashboard</h2>
+            </div>
+         </div>
+      </header>
+
+      <!-- weather -->
+      <h2 class="desc">today's weather</h2>
+      <section class="weather">
+         <div class="weather__time">
+            <span class="times weather__hours">01</span>
+            <span class=" weather__clock">:</span>
+            <span class="times weather__minute">02</span>
+            <span class=" weather__clock2">:</span>
+            <span class="times weather__second">03</span>
+            <span class=" weather__ampm"></span>
+         </div>
+         <div class="weather__days">
+            <span class="weather__month"></span>
+            <span class="weather__day"></span>
+            <span class="weather__week"></span>
+         </div>
+         <div class="weather__geo">Seoul</div>
+         <div class="weather__images">
+            <img class="weather__image" src="images/weather/clear.png" alt="image">
+            <span class="weather__main">Sunny</span>
+         </div>
+         <div class="weather__tempRh">
+            <span class="weather__temp">30</span>
+            <span class="weather__rh">50</span>
+         </div>
+      </section>
+
+      <!-- Calender -->
+      <section class="calender">
+         <div class="header">
+            <div class="year_month"></div>
+            <div class="nav">
+               <button class="nav-btn go-prev">&lt;</button>
+               <button class="nav-btn go-today">Today</button>
+               <button class="nav-btn go-next">&gt;</button>
+            </div>
+         </div>
+         <hr>
+         <div class="main">
+            <div class="days">
+               <div class="day">일</div>
+               <div class="day">월</div>
+               <div class="day">화</div>
+               <div class="day">수</div>
+               <div class="day">목</div>
+               <div class="day">금</div>
+               <div class="day">토</div>
+            </div>
+            <div class="dates"></div>
+         </div>
+      </section>
+
+
+      <!-- Projects -->
+      <section class="projects">
+         <h2 class="project__link">My Projects!</h2>
+         <div class="animation_canvas">
+            <div class="project__row">
+               <div class="project">
+                  <div>
+                     <img src="images/projects/project1.png" alt="shooting game" class="project__img">
+                     <span class="project__span">
+                        Vanilla JS game
+                     </span>
+                  </div>
+               </div>
+               <div class="project">
+                  <div>
+                     <img src="images/projects/project2.png" alt="paint" class="project__img">
+                     <span class="project__span">
+                        Vanilla JS paint
+                     </span>
+                  </div>
+               </div>
+               <div class="project">
+                  <div>
+                     <img src="images/projects/project3.png" alt="coordinates" class="project__img">
+                     <span class="project__span">
+                        Vanilla Js<br>Coordinates
+                     </span>
+                  </div>
+               </div>
+               <div class="project">
+                  <div>
+                     <img src="images/projects/project4.png" alt="homepage" class="project__img">
+                     <span class="project__span">
+                        coding Project 4
+                     </span>
+                  </div>
+               </div>
+               <div class="project">
+                  <div>
+                     <img src="images/projects/project5.png" alt="" class="project__img">
+                     <span class="project__span">
+                        coding Project 5
+                     </span>
+                  </div>
+               </div>
+               <div class="project">
+                  <div>
+                     <img src="images/projects/project6.png" alt="" class="project__img">
+                     <span class="project__span">
+                        coding Project 6
+                     </span>
+                  </div>
+               </div>
+               <div class="project">
+                  <div>
+                     <img src="images/projects/project7.png" alt="" class="project__img">
+                     <span class="project__span">
+                        coding Project 7
+                     </span>
+                  </div>
+               </div>
+               <div class="project">
+                  <div>
+                     <img src="images/projects/project8.png" alt="" class="project__img">
+                     <span class="project__span">
+                        coding Project 8
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="slide__button">
+               <img src="images/leftArrow.png" class="left_btn" alt="leftslider">
+               <img src="images/rightArrow.png" class="right_btn" alt="rightslider">
+            </div>
+         </div>
+      </section>
+      <!-- todo -->
+      <section class="todo">
+         <div class="todo__box">
+            <h2>Your task today!</h2>
+            <!-- <span>+ Add new Task</span> -->
+            <input type="text" class="todo__searchBox" placeholder="Add new Task">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <ul class="items">
+               <!-- <li class="item__row" data-id="-1">
+               <div class="item">
+                  <input type="checkbox" class="item__check">
+                  <span class="item__name">Play the game!</span>
+                  <button class="item__delete">
+                     <i class="fa-solid fa-trash" data-id="-1"></i>
+                  </button>
+               </div>
+               <div class="item__divider"></div>
+         </li> -->
+            </ul>
+         </div>
+      </section>
+
+      <footer>
+         <div class="contact__profile">
+            <h1 class="contact__title ">J-Plum</h1>
+         </div>
+         <h2 class="contact__title">Let's talk!</h2>
+         <h3 class="contact__email">dev.J.Plum@gmail.com</h3>
+         <div class="contact__links">
+            <a href="https://github.com/J-Plum" target="blank">
+               <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" target="blank">
+               <i class="fa-brands fa-linkedin"></i>
+            </a>
+         </div>
+         <p class="contact__rights">
+            2022 J-plum - All right reserved
+         </p>
+      </footer>
+      <button class="arrow-up">
+         <i class="fa-solid fa-arrow-up"></i>
+      </button>
+   </div>
+</body>
+
+</html>
